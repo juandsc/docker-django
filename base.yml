@@ -1,0 +1,21 @@
+version: '3'
+volumes:
+  pgdata:
+services:
+  python:
+    build:
+      context: .
+    volumes:
+      - ./test_app/app:/home/tester
+    ports:
+      - 8000:8000
+  postgres:
+    image: postgres:10.6
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_DB: testdb
+      POSTGRES_PASSWORD: test2019
+    volumes:
+      - pgdata:/var/lib/postgresql/data postgres
+    ports:
+      - 5432:5432

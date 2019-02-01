@@ -1,0 +1,8 @@
+version: '3'
+services:
+  python:
+    build:
+      dockerfile: docker/dev/python/Dockerfile
+    env_file:
+      - ./env_vars/dev_app.env
+    command: python manage.py runserver 0.0.0.0:8000

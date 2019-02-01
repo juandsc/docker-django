@@ -1,0 +1,5 @@
+*.pyc
+#env_vars/
+#prod.yml
+.bash_history
+db.sqlite3

@@ -1,0 +1,2 @@
+Invalid HTTP_HOST header: '0.0.0.0:8080'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
+Bad Request: /
